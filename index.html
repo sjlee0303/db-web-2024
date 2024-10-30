@@ -5,6 +5,22 @@
             Welcome to My First Website
         </title>
         <meta charset="UTF-8">
+        <style>
+            html {
+                /*배경 색
+                RGB(255,255,0) 이런식으로도 해도됨
+                #f0f0f0 16진수로 줘도 됨*/
+                background-color: gray;
+            }
+            body{
+                /*body가 차지하는 영역의 배경색만 바꿀 수 있음 */
+                background-color: aquamarine;
+
+                /* padding, margin */
+                border: 3px solid black; /*선의 굵기를 3pixel로, solid, 색은 black*/
+                padding: 10px; /*border와 텍스트?(body 안에 있는 것들) 사이에 간격을 주는*/
+            }
+        </style>
     </head>
     <body>
         <h1>This is my first Website</h1>
@@ -31,7 +47,45 @@
             </ul>
         </p>
 
+        <p>
+            <!--여기 action에 해당하는 곳에다가 입력값을 전달하겠다?
+            이거는 그냥 구글한테 보내는 경로?
+            
+            method="GET" 이거는 뭐지
+            method="POST" 도 가능한듯
+            -->
+            <form action="https://google.com/search" method="GET">
+                <label for="textinput">검색어</label>
+                
+                <input type="text" id="textinput" name="q"> 
+                <!--값을 집어넣는 것을 만들어주는?-->
+                <!--id는 키이다. 해당 id는 얘만 가지고 있음-->
+                
+                <input type="submit" value="검색">
+                <!--이거 버튼 누르면
+                https://www.google.com/search?q=cat 이 페이지로 이동한다.
+                cat은 내가 input에 작성한 값-->
+            </form>
+        </p>
         
         http://127.0.0.1:8000
+        python -m http.server Python
     </body>
 </html>
+
+<!--
+쿠팡사이트에서 개발자 도구에서 element를 날려버릴 수 있음
+body인가 head인가 날려버리면 그냥 완전 css 다 날라감? 되게 허접하게 
+head 인듯
+-->
+
+<!--
+CSS 룰 셋?
+
+head에 작성함. content랑은 덜 섞이도록.
+
+style 안에 룰셋을 집어넣음
+룰셋도 너무 많으면 복잡하니까 밖으로 뺴냄
+
+head 안에 자바스크립트도 쓸 수 있음
+-->
