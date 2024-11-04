@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Welcome to my page
+        </title>
+        <meta charset="UTF-8">
+        <style>
+            h1{
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <!--이렇게 html 안에다가 조건문을 넣을 수 있음-->
+        {% if name %} <!--제어를 위해서 필요한 부분 만약 name이 있다!-->
+        <h1> {{ name }} 홈페이지에 오신걸 환영합니다.</h1>
+        <!--render_template에서 넣어준 변수 값 name을 여기서 이렇게 출력해서 보여줄 수 있음-->
+        {% else %} <!--name 값이 none인 경우-->
+        <h1> 홈페이지에 오신걸 환영합니다.</h1>
+        {% endif %}
+
+        <p>My first paragraph.</p>
+    </body>
+</html>
+
+<!--
+Restaurant Menu
+웹페이지 만들 것임
+
+(경로는 총 3개?)
+restaurant/
+
+-->
