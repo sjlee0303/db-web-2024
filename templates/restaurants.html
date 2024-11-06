@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurants</title>
+        <meta charest="utf-8">
+    </head>
+    <body>
+        <h1>Wonderful Restaurants</h1>
+        <p>
+            <a href="/restaurant/new/"> Create a new restaurant </a>
+        </p>
+        <ul>
+            {% for restaurants in restaurants %}
+                <li>
+                    <!--{{restaurants[0]}}-->
+
+                    <!--해당 사이트로 가는 것? (route 설정된 곳으로 가는 것)
+                    하이퍼링크 만든 것?
+                    restaurants[0]가 id, restaurants[1]이 이름-->
+                    <a href="/restaurant/{{restaurants[0]}}/">{{restaurants[1]}}</a>
+
+                </li>
+            {% endfor %}
+            <!--restaurant[0]은 뭐지
+            이렇게 html에서 for loop를 돌릴 수 있음-->
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>New Restaurant</h1>
+        <form action="/restaurant/new/" method="POST">
+            <!--누구한테 보낼지 결정 하는 것 action
+            /restaurant/new에 다가 전달함
+            method를 POST로 보내겠다. POST로 요청하겠다.
+            
+            GET은 브라우저가 서버에서 가져오는 것?
+            POST는 내가 너한테 전달하겠다.
+            이렇게 두 개할 수 있음-->
+            <input type="text" name="name">
+            <input type="submit" value="Create">
+        </form>
+    </body>
+</html>
